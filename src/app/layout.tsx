@@ -6,10 +6,17 @@ import "@/styles/global.css";
 import clsx from "clsx";
 import localFont from "next/font/local";
 import { Header } from "@/components/elements/Header/Header";
+import { EB_Garamond } from "next/font/google";
 
 const myFont = localFont({
     src: "../assets/font/SourceHanSansJP-VF.otf.woff2",
 });
+
+const serifFont = EB_Garamond({
+    weight: "variable",
+    subsets: ["latin"],
+    variable: "--serif-font"
+})
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -23,7 +30,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={clsx(myFont.className)}>
+            <body className={clsx(myFont.className, serifFont.variable)}>
                 <Header />
                 {children}
             </body>
