@@ -1,4 +1,5 @@
 import { Colors } from "@/styles/color";
+import { mediaQueryScreen } from "@/styles/queries";
 import { style } from "@vanilla-extract/css";
 
 export const wrapper = style({
@@ -11,10 +12,16 @@ export const wrapper = style({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "60%",
+    width: "95%",
     maxWidth: "820px",
     padding: "0.5rem",
-    backdropFilter: "blur(3px)"
+    backdropFilter: "blur(3px)",
+
+    "@media": {
+        [mediaQueryScreen("md")]: {
+            width: "60%"
+        }
+    }
 });
 
 export const sub_wrapper = style({
