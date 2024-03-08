@@ -54,3 +54,7 @@ globalStyle("body button", {
 globalStyle("tbody, table", {
     width: "100%",
 });
+
+globalStyle("td", {
+    padding: "0.5rem"
+})
