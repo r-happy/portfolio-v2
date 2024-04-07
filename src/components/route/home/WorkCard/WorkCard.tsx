@@ -21,7 +21,7 @@ export const WorkCard: React.FC<WorkCardComponet> = ({
 }) => {
     return (
         <div className={clsx(s.wrapper)}>
-            <Link href={`/work/${id}`}>
+            {/* <Link href={`/work/${id}`}> */}
                 <div className={clsx(s.image_wrapper)}>
                     <Image
                         alt="work image"
@@ -31,7 +31,7 @@ export const WorkCard: React.FC<WorkCardComponet> = ({
                         className={clsx(s.image)}
                     />
                 </div>
-            </Link>
+            {/* </Link> */}
             <div className={clsx(s.name)}>
                 <TextLink href={href} blank={true}>
                     {name}

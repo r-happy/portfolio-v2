@@ -15,11 +15,11 @@ export const image = style({
     height: "100%",
     width: "100%",
     objectFit: "cover",
-    objectPosition: "top",
-    transition: "all .2s ease",
-    ":hover": {
-        transform: "scale(1.1)",
-    },
+    // objectPosition: "top",
+    // transition: "all .2s ease",
+    // ":hover": {
+    //     transform: "scale(1.1)",
+    // },
 });
 
 export const name = style({
