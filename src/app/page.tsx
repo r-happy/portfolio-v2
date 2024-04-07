@@ -37,11 +37,13 @@ const works_contents: WorkCardComponet[] = [
         name: "上田オンヌリ教会のホームページ",
         image_path: "uoc.rhappy.dev_.webp",
         href: "https://uoc.rhappy.dev",
+        id: "uoc",
     },
     {
         name: "市坂山荘のホームページ",
         image_path: "www.ichizakasansou-bessho.com_.webp",
         href: "https://www.ichizakasansou-bessho.com/",
+        id: "ichizaka",
     },
 ];
 
@@ -51,7 +53,7 @@ export default function Home() {
             <Hero />
             <section className={clsx(s.intro_wrapper)}>
                 <p>
-                    情報系を学んでいる高専二年生です。
+                    情報系を学んでいる高専生です。
                     ウェブの分野に興味があり普段はウェブサイト作ったりしています。
                     シンプルなデザインが好きで、シンプルだけど飽きないウェブサイトを目指してます。
                 </p>
@@ -131,6 +133,7 @@ export default function Home() {
                                     name={e.name}
                                     image_path={`/img/${e.image_path}`}
                                     href={e.href}
+                                    id={e.id}
                                 />
                             );
                         })}
