@@ -34,6 +34,18 @@ const timeline_contents: TimelineContents[] = [
 
 const works_contents: WorkCardComponet[] = [
     {
+        name: "2024年度長野高専工嶺祭のホームページ",
+        image_path: "2024koreisai.tech_.webp",
+        href: "none",
+        id: "2024koreisai",
+    },
+    {
+        name: "物品管理アプリ",
+        image_path: "mng.rhappy.dev_.webp",
+        href: "none",
+        id: "mng",
+    },
+    {
         name: "上田オンヌリ教会のホームページ",
         image_path: "uoc.rhappy.dev_.webp",
         href: "https://uoc.rhappy.dev",
