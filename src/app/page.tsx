@@ -61,96 +61,98 @@ const works_contents: WorkCardComponet[] = [
 
 export default function Home() {
     return (
-        <div className={clsx(w.container)}>
+        <div>
             <Hero />
-            <section className={clsx(s.intro_wrapper)}>
-                <p>
-                    情報系を学んでいる高専生です。
-                    ウェブの分野に興味があり普段はウェブサイト作ったりしています。
-                    シンプルなデザインが好きで、シンプルだけど飽きないウェブサイトを目指してます。
-                </p>
-            </section>
-            <div className={clsx(s.main_content_wrapper)}>
-                <HomeCard title="On the web">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <SiGithub />
-                                </td>
-                                <td>Github</td>
-                                <td>
-                                    <TextLink
-                                        href="https://github.com/r-happy"
-                                        blank={true}
-                                    >
-                                        https://github.com/r-happy
-                                    </TextLink>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <SiTwitter />
-                                </td>
-                                <td>Twitter（現X）</td>
-                                <td>
-                                    <TextLink
-                                        href="https://twitter.com/rhappy435130"
-                                        blank={true}
-                                    >
-                                        https://twitter.com/rhappy435130
-                                    </TextLink>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </HomeCard>
-                <HomeCard title="Timeline">
-                    <ol className={clsx(s.timeline)}>
-                        {timeline_contents
-                            .slice()
-                            .reverse()
-                            .map((e, index) => {
-                                return (
-                                    <li key={index}>
-                                        <div className={clsx(s.timeline_time)}>
-                                            <div
-                                                className={clsx(s.timeline_dot)}
-                                            />
-                                            <p>{e.date}</p>
-                                        </div>
-                                        <div
-                                            className={clsx(s.timeline_content)}
+            <div className={clsx(w.container)}>
+                <section className={clsx(s.intro_wrapper)}>
+                    <p>
+                        情報系を学んでいる高専生です。
+                        ウェブの分野に興味があり普段はウェブサイト作ったりしています。
+                        シンプルなデザインが好きで、シンプルだけど飽きないウェブサイトを目指してます。
+                    </p>
+                </section>
+                <div className={clsx(s.main_content_wrapper)}>
+                    <HomeCard title="On the web">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <SiGithub />
+                                    </td>
+                                    <td>Github</td>
+                                    <td>
+                                        <TextLink
+                                            href="https://github.com/r-happy"
+                                            blank={true}
                                         >
-                                            <h3
-                                                className={clsx(
-                                                    s.timeline_content_title
-                                                )}
+                                            https://github.com/r-happy
+                                        </TextLink>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <SiTwitter />
+                                    </td>
+                                    <td>Twitter（現X）</td>
+                                    <td>
+                                        <TextLink
+                                            href="https://twitter.com/rhappy435130"
+                                            blank={true}
+                                        >
+                                            https://twitter.com/rhappy435130
+                                        </TextLink>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </HomeCard>
+                    <HomeCard title="Timeline">
+                        <ol className={clsx(s.timeline)}>
+                            {timeline_contents
+                                .slice()
+                                .reverse()
+                                .map((e, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <div className={clsx(s.timeline_time)}>
+                                                <div
+                                                    className={clsx(s.timeline_dot)}
+                                                />
+                                                <p>{e.date}</p>
+                                            </div>
+                                            <div
+                                                className={clsx(s.timeline_content)}
                                             >
-                                                {e.title}
-                                            </h3>
-                                            <p>{e.content}</p>
-                                        </div>
-                                    </li>
+                                                <h3
+                                                    className={clsx(
+                                                        s.timeline_content_title
+                                                    )}
+                                                >
+                                                    {e.title}
+                                                </h3>
+                                                <p>{e.content}</p>
+                                            </div>
+                                        </li>
+                                    );
+                                })}
+                        </ol>
+                    </HomeCard>
+                    <HomeCard title="Works">
+                        <div className={clsx(s.work_card_wrapper)}>
+                            {works_contents.map((e, index) => {
+                                return (
+                                    <WorkCard
+                                        key={index}
+                                        name={e.name}
+                                        image_path={`/img/${e.image_path}`}
+                                        href={e.href}
+                                        id={e.id}
+                                    />
                                 );
                             })}
-                    </ol>
-                </HomeCard>
-                <HomeCard title="Works">
-                    <div className={clsx(s.work_card_wrapper)}>
-                        {works_contents.map((e, index) => {
-                            return (
-                                <WorkCard
-                                    key={index}
-                                    name={e.name}
-                                    image_path={`/img/${e.image_path}`}
-                                    href={e.href}
-                                    id={e.id}
-                                />
-                            );
-                        })}
-                    </div>
-                </HomeCard>
+                        </div>
+                    </HomeCard>
+                </div>
             </div>
         </div>
     );

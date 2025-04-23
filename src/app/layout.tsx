@@ -32,7 +32,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={clsx(myFont.className, serifFont.variable)}>
-                <Header />
+                {/* <Header /> */}
                 {children}
                 <Footer />
             </body>
