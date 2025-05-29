@@ -34,6 +34,12 @@ const timeline_contents: TimelineContents[] = [
 
 const works_contents: WorkCardComponet[] = [
     {
+        name: "進捗管理アプリ",
+        image_path: "pm.rhappy.dev_.webp",
+        href: "https://pm.rhappy.dev",
+        id: "pm",
+    },
+    {
         name: "2024年度長野高専工嶺祭のホームページ",
         image_path: "2024koreisai.tech_.webp",
         href: "none",
